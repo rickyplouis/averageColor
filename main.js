@@ -8,9 +8,7 @@ const arrayToChunks = (array) => [array[0] + array[1], array[2] + array[3], arra
 
 
 const colorToDecimal = (color) => {
-  let hexArray = arrayToChunks(colorToArray(color))
-  let decimalArray = hexArray.map((hex) => convertHexToNum(hex))
-  return decimalArray
+  return arrayToChunks(colorToArray(color)).map((hex) => convertHexToNum(hex))
 }
 
 const averageColors = (color1, color2) => {
